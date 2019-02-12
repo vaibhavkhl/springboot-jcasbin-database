@@ -1,0 +1,16 @@
+p, admin_role, /roles, *
+p, read_role, /roles, GET
+p, vb, /favicon.ico, GET
+
+p, nsm_role, /national_sales, *
+p, rsm_role, /regional_sales, *
+p, asm_role, /area_sales, *
+
+
+g, nsm_role, rsm_role
+g, rsm_role, asm_role
+
+g, nsm_user, nsm_role
+g, nsm_user, admin_role
+g, rsm_user, rsm_role
+g, asm_user, asm_role
